@@ -1,0 +1,125 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": {
+          "stops": [
+            [
+              7,
+              "#FFFCF7"
+            ],
+            [
+              10,
+              "#FAF9F6"
+            ]
+          ]
+        }
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": [
+          "rgb",
+          247,
+          247,
+          245
+        ]
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": [
+          "rgb",
+          247,
+          247,
+          245
+        ]
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}

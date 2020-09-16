@@ -1,0 +1,384 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "natural"
+        ],
+        "wetland",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-hydro-water-wetland",
+      "paint": {
+        "fill-color": [
+          "rgb",
+          227,
+          242,
+          253
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "natural"
+        ],
+        "glacier",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-hydro-water-glacier",
+      "paint": {
+        "fill-color": "#FBFCFB"
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "natural"
+        ],
+        [
+          "wetland",
+          "glacier"
+        ],
+        false,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ]
+      ],
+      "id": "pg-hydro-water-l",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "paint": {
+        "fill-color": [
+          "rgb",
+          187,
+          222,
+          251
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "fill"
+    },
+    {
+      "id": "ls-hydro-water-l",
+      "maxzoom": 15,
+      "minzoom": 7,
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "waterway"
+          ],
+          "river",
+          "#D8ECF6",
+          "stream",
+          "#C7E4F2",
+          "canal",
+          "#C7E4F2",
+          "drain",
+          "#C7E4F2",
+          [
+            "rgb",
+            33,
+            150,
+            243
+          ]
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "id": "ls-hydro-water-m",
+      "maxzoom": 7,
+      "minzoom": 6,
+      "paint": {
+        "line-color": [
+          "rgb",
+          33,
+          150,
+          243
+        ],
+        "line-width": 0.5
+      },
+      "source": "un-l",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "scalerank"
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-s6",
+      "maxzoom": 6,
+      "minzoom": 5,
+      "paint": {
+        "line-color": [
+          "rgb",
+          33,
+          150,
+          243
+        ],
+        "line-width": 0.5
+      },
+      "source": "un-s",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "scalerank"
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-water-s5",
+      "maxzoom": 6,
+      "minzoom": 4,
+      "paint": {
+        "line-color": [
+          "rgb",
+          33,
+          150,
+          243
+        ],
+        "line-width": 0.5
+      },
+      "source": "un-s",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "scalerank"
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-s4",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "rgb",
+          33,
+          150,
+          243
+        ],
+        "line-width": 0.5
+      },
+      "source": "un-s",
+      "source-layer": "water",
+      "type": "line"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}

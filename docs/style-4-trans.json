@@ -1,0 +1,894 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "z_order"
+        ],
+        1,
+        true,
+        false
+      ],
+      "id": "ls-road-line-small",
+      "maxzoom": 6,
+      "minzoom": 4,
+      "paint": {
+        "line-color": [
+          "rgb",
+          204,
+          122,
+          155
+        ],
+        "line-width": 0.5
+      },
+      "source": "osm-s",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "path",
+          "pedestrian",
+          "footway",
+          "cycleway",
+          "living_street",
+          "steps",
+          "bridleway",
+          "service"
+        ],
+        true,
+        false
+      ],
+      "id": "ls-road-line-h",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          235,
+          235,
+          235
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          64
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "residential",
+          "track",
+          "unclassified"
+        ],
+        [
+          "!",
+          [
+            "has",
+            "layer"
+          ]
+        ],
+        false
+      ],
+      "id": "ls-road-line-g",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          235,
+          235,
+          235
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          216
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "road",
+          "tertiary_link"
+        ],
+        [
+          "!",
+          [
+            "has",
+            "layer"
+          ]
+        ],
+        false
+      ],
+      "id": "ls-road-line-f",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          255,
+          255,
+          255
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          240
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "tertiary",
+          "secondary_link"
+        ],
+        [
+          "case",
+          [
+            "has",
+            "layer"
+          ],
+          false,
+          true
+        ],
+        false
+      ],
+      "id": "ls-road-line-e",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          223,
+          208,
+          214
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          288
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "secondary",
+          "primary_link"
+        ],
+        [
+          "case",
+          [
+            "has",
+            "layer"
+          ],
+          false,
+          true
+        ],
+        false
+      ],
+      "id": "ls-road-line-d",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          204,
+          184,
+          192
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          288
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "primary",
+          "trunk_link"
+        ],
+        [
+          "case",
+          [
+            "has",
+            "layer"
+          ],
+          false,
+          true
+        ],
+        false
+      ],
+      "id": "ls-road-line-c",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          204,
+          184,
+          192
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          312
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        [
+          "trunk",
+          "motorway_link"
+        ],
+        [
+          "case",
+          [
+            "has",
+            "layer"
+          ],
+          false,
+          true
+        ],
+        false
+      ],
+      "id": "ls-road-line-b",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          204,
+          122,
+          155
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          312
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "highway"
+        ],
+        "motorway",
+        [
+          "case",
+          [
+            "has",
+            "layer"
+          ],
+          false,
+          true
+        ],
+        false
+      ],
+      "id": "ls-road-line-a",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          204,
+          122,
+          155
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          22,
+          360
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "road",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "LineString",
+          "MultiLineString"
+        ],
+        [
+          "any",
+          [
+            "match",
+            [
+              "get",
+              "railway"
+            ],
+            "subway",
+            true,
+            false
+          ],
+          [
+            "match",
+            [
+              "get",
+              "tunnel"
+            ],
+            "yes",
+            true,
+            false
+          ]
+        ],
+        false
+      ],
+      "id": "ls-railway-subway",
+      "paint": {
+        "line-color": [
+          "rgb",
+          128,
+          102,
+          125
+        ],
+        "line-dasharray": [
+          4,
+          4
+        ],
+        "line-width": 1
+      },
+      "source": "osm-l",
+      "source-layer": "railway",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "LineString",
+          "MultiLineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "tunnel"
+          ],
+          "yes",
+          false,
+          [
+            "any",
+            [
+              "match",
+              [
+                "get",
+                "railway"
+              ],
+              "subway",
+              false,
+              true
+            ],
+            [
+              "match",
+              [
+                "get",
+                "bridge"
+              ],
+              "viaduct",
+              true,
+              false
+            ]
+          ]
+        ],
+        false
+      ],
+      "id": "ls-railway-line",
+      "paint": {
+        "line-color": [
+          "rgb",
+          128,
+          102,
+          125
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "railway"
+          ],
+          [
+            "narrow_gauge",
+            "light_rail"
+          ],
+          0.5,
+          1
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "railway",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "LineString",
+          "MultiLineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "tunnel"
+          ],
+          "yes",
+          false,
+          [
+            "any",
+            [
+              "match",
+              [
+                "get",
+                "railway"
+              ],
+              "subway",
+              false,
+              true
+            ],
+            [
+              "match",
+              [
+                "get",
+                "bridge"
+              ],
+              "viaduct",
+              true,
+              false
+            ]
+          ]
+        ],
+        false
+      ],
+      "id": "ls-railway-dash",
+      "paint": {
+        "line-color": [
+          "rgb",
+          128,
+          102,
+          125
+        ],
+        "line-dasharray": [
+          1,
+          5
+        ],
+        "line-width": 2
+      },
+      "source": "osm-l",
+      "source-layer": "railway",
+      "type": "line"
+    },
+    {
+      "id": "ls-ferry",
+      "paint": {
+        "line-color": [
+          "rgb",
+          61,
+          156,
+          204
+        ],
+        "line-dasharray": [
+          6,
+          6
+        ],
+        "line-width": 1
+      },
+      "source": "osm-l",
+      "source-layer": "ferries",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "aeroway"
+        ],
+        [
+          "taxiway",
+          "runway"
+        ],
+        false,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ]
+      ],
+      "id": "ls-structure",
+      "paint": {
+        "line-color": [
+          "rgb",
+          158,
+          158,
+          158
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "structure",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "aeroway"
+        ],
+        "taxiway",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-structure-taxiway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          166,
+          133,
+          162
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          2,
+          22,
+          576
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "structure",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "aeroway"
+        ],
+        "runway",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-structure-runway",
+      "layout": {
+        "line-cap": "square"
+      },
+      "paint": {
+        "line-color": [
+          "rgb",
+          128,
+          102,
+          125
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          5,
+          22,
+          1440
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "structure",
+      "type": "line"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}

@@ -1,0 +1,809 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "countrycode"
+        ],
+        [
+          "LIB",
+          "CAF"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "_source"
+          ],
+          "un_global_pois",
+          false,
+          true
+        ],
+        true
+      ],
+      "id": "pt-un-poi",
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "coalesce",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "get",
+              "feat_class"
+            ]
+          ],
+          "Airfield",
+          "airfield",
+          "Airport",
+          "airport",
+          "Bank",
+          "bank",
+          [
+            "Bar",
+            "Nightclub",
+            "Club"
+          ],
+          "bar",
+          "Bus Station",
+          "bus_station",
+          [
+            "Castle",
+            "Fort"
+          ],
+          "castle",
+          [
+            "Church",
+            "Christan"
+          ],
+          "christan",
+          [
+            "University",
+            "College"
+          ],
+          "college",
+          [
+            "Market",
+            "Media",
+            "Super Market",
+            "Commercial"
+          ],
+          "commercial",
+          [
+            "Radio Tower",
+            "Telecommunication",
+            "Communication",
+            "Communication Tower"
+          ],
+          "communication",
+          "Courthouse",
+          "courthouse",
+          "Cultural",
+          "cultural",
+          [
+            "Embassy",
+            "Consulate"
+          ],
+          "embassy",
+          [
+            "Boat Ramp",
+            "Ferry Terminal",
+            "Port"
+          ],
+          "ferry_terminal",
+          "Fire Station",
+          "fire_station",
+          "fuel",
+          "fuel",
+          "Helipad",
+          "helipad",
+          "Hospital",
+          "hospital",
+          "Hotel",
+          "hotel",
+          "Industrial",
+          "industrial",
+          [
+            "Cemetery",
+            "Memorial",
+            "Monument"
+          ],
+          "memorial",
+          [
+            "Military Camp",
+            "Military"
+          ],
+          "military",
+          [
+            "Mosque",
+            "Muslim"
+          ],
+          "muslim",
+          "NGO",
+          "ngo",
+          [
+            "Landmark",
+            "Information Centre",
+            "Health Centre",
+            "Residence",
+            "Other"
+          ],
+          "other",
+          [
+            "Social Centre",
+            "International Organisation",
+            "Youth Centre",
+            "Regional Organisation",
+            "Other Public Building"
+          ],
+          "other_public_building",
+          "Park",
+          "park",
+          "Pharmacy",
+          "pharmacy",
+          [
+            "Police",
+            "Police Station"
+          ],
+          "police_station",
+          "Post Office",
+          "post_office",
+          "Prison",
+          "prison",
+          [
+            "Local Authority",
+            "Library",
+            "Public Place",
+            "National Institution",
+            "Archeological",
+            "Ruins",
+            "Town Hall",
+            "Museum"
+          ],
+          "other_public_building",
+          "Railway Station",
+          "railway_station",
+          "Restaurant",
+          "restaurant",
+          [
+            "Primary School",
+            "Secondary School",
+            "Kindergarten",
+            "School"
+          ],
+          "school",
+          "Sport",
+          "sport",
+          "Stadium",
+          "stadium",
+          "Taxi Station",
+          "taxi_station",
+          "UN",
+          "un",
+          "Water Storage",
+          "water_storage",
+          "Water Supply",
+          "water_supply",
+          "Zoo",
+          "zoo",
+          "default"
+        ],
+        "icon-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          15,
+          1
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          "center",
+          17,
+          "top"
+        ],
+        "text-field": "{poiname}",
+        "text-font": [
+          "sans"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          17,
+          [
+            "literal",
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          10,
+          15,
+          12
+        ]
+      },
+      "paint": {
+        "text-color": [
+          "rgb",
+          0,
+          0,
+          0
+        ],
+        "text-halo-color": [
+          "rgb",
+          238,
+          238,
+          238
+        ],
+        "text-halo-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "poi",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "_source"
+        ],
+        [
+          "osm_planet_places"
+        ],
+        false,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Point",
+            "MultiPoint"
+          ],
+          true,
+          false
+        ]
+      ],
+      "id": "pt-osm-poi",
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "capital"
+          ],
+          "yes",
+          "national_capital",
+          [
+            "match",
+            [
+              "coalesce",
+              [
+                "get",
+                "leasure"
+              ],
+              [
+                "get",
+                "sport"
+              ],
+              [
+                "get",
+                "amenity"
+              ],
+              [
+                "get",
+                "historic"
+              ],
+              [
+                "get",
+                "office"
+              ],
+              [
+                "get",
+                "tourism"
+              ],
+              [
+                "get",
+                "shop"
+              ],
+              [
+                "get",
+                "man_made"
+              ],
+              [
+                "get",
+                "landuse"
+              ],
+              [
+                "get",
+                "power"
+              ],
+              [
+                "get",
+                "aeroway"
+              ],
+              [
+                "get",
+                "railway"
+              ],
+              [
+                "get",
+                "public_transport"
+              ],
+              [
+                "get",
+                "highway"
+              ],
+              [
+                "get",
+                "religion"
+              ]
+            ],
+            [
+              "sports_centre",
+              "tennis",
+              "swimming_pool",
+              "swimming"
+            ],
+            "sport",
+            [
+              "public_building",
+              "townhall"
+            ],
+            "public_building",
+            [
+              "college",
+              "university"
+            ],
+            "college",
+            [
+              "restaurant",
+              "fast_food",
+              "cafe",
+              "food_court"
+            ],
+            "restaurant",
+            [
+              "biergarten",
+              "nightclub",
+              "pub",
+              "bar"
+            ],
+            "bar",
+            [
+              "community_centre",
+              "government"
+            ],
+            "other_public_building",
+            [
+              "library",
+              "arts_centre",
+              "archaeological_site",
+              "ruins",
+              "museum"
+            ],
+            "public_building",
+            [
+              "money_transfer",
+              "bureau_de_change",
+              "bank",
+              "atm"
+            ],
+            "bank",
+            [
+              "monument",
+              "memorial",
+              "grave_yard"
+            ],
+            "memorial",
+            [
+              "castle",
+              "fort"
+            ],
+            "castle",
+            [
+              "bed_and_breakfast",
+              "hotel",
+              "motel",
+              "guest_house",
+              "hostel",
+              "chalet"
+            ],
+            "hotel",
+            [
+              "car_repair",
+              "supermarket",
+              "kiosk",
+              "department_store",
+              "clothes",
+              "books",
+              "butcher",
+              "beverages",
+              "alcohol",
+              "optician",
+              "stationery",
+              "mobile_phone",
+              "greengrocer",
+              "car",
+              "furniture",
+              "computer",
+              "hairdresser",
+              "travel_agency",
+              "cinema",
+              "theatre",
+              "marketplace",
+              "car_rental",
+              "bakery"
+            ],
+            "commercial",
+            [
+              "airfield",
+              "aerodrome",
+              "aeroway"
+            ],
+            "airfield",
+            [
+              "bus_station",
+              "bus_stop"
+            ],
+            "bus_station",
+            [
+              "station",
+              "halt",
+              "tram_stop"
+            ],
+            "railway_station",
+            "drinking_water",
+            "water_supply",
+            "park",
+            "park",
+            "stadium",
+            "stadium",
+            "embassy",
+            "embassy",
+            "hospital",
+            "hospital",
+            "fuel",
+            "fuel",
+            "airport",
+            "airport",
+            "helipad",
+            "helipad",
+            "ferry_terminal",
+            "ferry_terminal",
+            "zoo",
+            "zoo",
+            "theme_park",
+            "theme_park",
+            "ngo",
+            "ngo",
+            "pharmacy",
+            "pharmacy",
+            "courthouse",
+            "courthouse",
+            "police",
+            "police_station",
+            "prison",
+            "prison",
+            "fire_station",
+            "fire_station",
+            "post_office",
+            "post_office",
+            "school",
+            "school",
+            "default"
+          ]
+        ],
+        "icon-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            1,
+            [
+              "case",
+              [
+                "has",
+                "place"
+              ],
+              0,
+              [
+                "any",
+                [
+                  "has",
+                  "shop"
+                ],
+                [
+                  "has",
+                  "tourism"
+                ],
+                [
+                  "has",
+                  "craft"
+                ],
+                [
+                  "has",
+                  "amenity"
+                ],
+                [
+                  "has",
+                  "sports"
+                ]
+              ],
+              0,
+              1
+            ]
+          ],
+          17,
+          1
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            "bottom-left",
+            "center"
+          ],
+          17,
+          "top"
+        ],
+        "text-field": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "place"
+            ],
+            [
+              "get",
+              "name"
+            ],
+            ""
+          ],
+          17,
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "sans"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            [
+              "literal",
+              [
+                0.4,
+                0
+              ]
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          17,
+          [
+            "literal",
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            20,
+            [
+              "match",
+              [
+                "get",
+                "place"
+              ],
+              "city",
+              18,
+              "town",
+              16,
+              [
+                "village",
+                "hamlet",
+                "isolated_dwelling",
+                "locality"
+              ],
+              12,
+              10
+            ]
+          ],
+          18,
+          10
+        ]
+      },
+      "paint": {
+        "text-color": [
+          "rgb",
+          0,
+          0,
+          0
+        ],
+        "text-halo-color": [
+          "rgb",
+          238,
+          238,
+          238
+        ],
+        "text-halo-width": 1
+      },
+      "source": "osm-l",
+      "source-layer": "poi",
+      "type": "symbol"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}

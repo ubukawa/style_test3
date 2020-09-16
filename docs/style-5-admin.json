@@ -1,0 +1,1427 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Coastline"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-coastline-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "line-color": [
+          "rgb",
+          155,
+          174,
+          180
+        ]
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Coastline"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-coastline-l",
+      "maxzoom": 10,
+      "minzoom": 5,
+      "paint": {
+        "line-color": [
+          "rgb",
+          155,
+          174,
+          180
+        ]
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Sovereign base limit"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-sovereign",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.656
+        ],
+        "line-width": 2
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "International boundary",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-international",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          230,
+          230,
+          0.65
+        ],
+        "line-width": 4.26
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Armistice or International administrative line",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-armistice",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.65
+        ],
+        "line-width": 4
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Special boundary line",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-special",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.65
+        ],
+        "line-width": 4
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Other line of separation",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-other",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.65
+        ],
+        "line-width": 3.66
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Autonomous region boundary",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-l-halo-autonomous",
+      "minzoom": 5,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.65
+        ],
+        "line-width": 2.66
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "level"
+        ],
+        "International boundary",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-vmc-halo-international",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          223,
+          0.65
+        ],
+        "line-width": 4
+      },
+      "source": "un-l",
+      "source-layer": "vmc_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "level"
+        ],
+        [
+          "Administrative boundary 3"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-vmc-admin3",
+      "minzoom": 9.21,
+      "paint": {
+        "line-color": "#CCCCCC",
+        "line-dasharray": [
+          2,
+          4
+        ],
+        "line-width": 0.67
+      },
+      "source": "un-l",
+      "source-layer": "vmc_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "level"
+        ],
+        [
+          "Administrative boundary 2"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-vmc-admin2",
+      "minzoom": 7.21,
+      "paint": {
+        "line-color": "#CCCCCC",
+        "line-dasharray": [
+          4,
+          6
+        ],
+        "line-width": 0.67
+      },
+      "source": "un-l",
+      "source-layer": "vmc_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "boundary_type"
+        ],
+        [
+          "Administrative boundary 2"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-mik-admin2",
+      "minzoom": 7.21,
+      "paint": {
+        "line-color": "#CCCCCC",
+        "line-dasharray": [
+          4,
+          6
+        ],
+        "line-width": 0.67
+      },
+      "source": "un-l",
+      "source-layer": "mik_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "Subnational 2"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-admin2-l-nohq",
+      "minzoom": 7.21,
+      "paint": {
+        "line-color": "#CCCCCC",
+        "line-dasharray": [
+          4,
+          6
+        ],
+        "line-width": 0.67
+      },
+      "source": "un-l",
+      "source-layer": "c_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Administrative boundary 2"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-admin2-l-hq",
+      "minzoom": 7.21,
+      "paint": {
+        "line-color": "#CCCCCC",
+        "line-dasharray": [
+          4,
+          6
+        ],
+        "line-width": 0.67
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "level"
+        ],
+        [
+          "Administrative boundary 1"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-vmc-admin1",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#999999",
+        "line-dasharray": [
+          5.3,
+          4
+        ],
+        "line-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "vmc_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "Subnational 1"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-admin1-l-nohq",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#999999",
+        "line-dasharray": [
+          5.3,
+          4
+        ],
+        "line-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "c_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Administrative boundary 1"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-admin1-l-hq",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#999999",
+        "line-dasharray": [
+          5.3,
+          4
+        ],
+        "line-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Sovereign base limit"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-sovereign-l-hq",
+      "minzoom": 5.89,
+      "paint": {
+        "line-color": "#9C9C9C",
+        "line-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Autonomous region boundary"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-autonomous-l-hq",
+      "minzoom": 5,
+      "paint": {
+        "line-color": "#737B80",
+        "line-dasharray": [
+          6.67,
+          4
+        ],
+        "line-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Other line of separation"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-other-l",
+      "minzoom": 6,
+      "paint": {
+        "line-color": [
+          "rgb",
+          60,
+          60,
+          60
+        ],
+        "line-dasharray": [
+          1,
+          1
+        ],
+        "line-width": 2
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Armistice or International administrative line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-armistice-l",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#393D40",
+        "line-dasharray": [
+          6,
+          3.5
+        ],
+        "line-width": 1.333
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Special boundary line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-special-l",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#393D40",
+        "line-dasharray": [
+          4,
+          2
+        ],
+        "line-width": 1.33
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "level"
+        ],
+        [
+          "International boundary"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-vmc-international-l",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#393D40",
+        "line-width": 1.333
+      },
+      "source": "un-l",
+      "source-layer": "vmc_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "International boundary"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-international-l",
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#393D40",
+        "line-width": 1.333
+      },
+      "source": "un-l",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Other line of separation"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-m-other",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "rgb",
+            100,
+            100,
+            100
+          ],
+          3,
+          [
+            "rgb",
+            60,
+            60,
+            60
+          ]
+        ],
+        "line-dasharray": [
+          1,
+          1
+        ],
+        "line-width": 2
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Armistice or International administrative line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-m-armistice",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": "#454A4D",
+        "line-dasharray": [
+          8,
+          4.5
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.666
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Special boundary line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-m-special",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": "#454A4D",
+        "line-dasharray": [
+          4,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.666
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "International boundary"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-m-international",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": "#454A4D",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.666
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Other line of separation"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-s-other",
+      "maxzoom": 3,
+      "minzoom": 0,
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "rgb",
+            100,
+            100,
+            100
+          ],
+          3,
+          [
+            "rgb",
+            60,
+            60,
+            60
+          ]
+        ],
+        "line-dasharray": [
+          1,
+          1
+        ],
+        "line-width": 2
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Armistice or International administrative line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-s-armistice",
+      "maxzoom": 3,
+      "minzoom": 0,
+      "paint": {
+        "line-color": "#737B80",
+        "line-dasharray": [
+          10.6,
+          6
+        ],
+        "line-width": {
+          "stops": [
+            [
+              1,
+              0.13
+            ],
+            [
+              3,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "Special boundary line"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-s-special",
+      "maxzoom": 3,
+      "minzoom": 0,
+      "paint": {
+        "line-color": "#737B80",
+        "line-dasharray": [
+          2,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              1,
+              0.13
+            ],
+            [
+              2,
+              0.33
+            ],
+            [
+              3,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        [
+          "International boundary"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-boundary-s-international",
+      "maxzoom": 3,
+      "minzoom": 0,
+      "paint": {
+        "line-color": "#737B80",
+        "line-width": {
+          "stops": [
+            [
+              1,
+              0.13
+            ],
+            [
+              2,
+              0.33
+            ],
+            [
+              3,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}

@@ -1,0 +1,490 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landcover-s",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "gridcode"
+          ],
+          20,
+          "#DAEDD0",
+          30,
+          "#ECF3DD",
+          80,
+          "#F6EFEF",
+          [
+            "rgb",
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "source": "un-s",
+      "source-layer": "landcover",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "gridcode"
+        ],
+        20,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-landcover-m20",
+      "maxzoom": 17,
+      "minzoom": 6,
+      "paint": {
+        "fill-color": "#DAEDD0"
+      },
+      "source": "un-l",
+      "source-layer": "landcover",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "gridcode"
+        ],
+        30,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-landcover-m30",
+      "maxzoom": 17,
+      "minzoom": 6,
+      "paint": {
+        "fill-color": "#ECF3DD"
+      },
+      "source": "un-l",
+      "source-layer": "landcover",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "gridcode"
+        ],
+        80,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-landcover-m80",
+      "maxzoom": 17,
+      "minzoom": 6,
+      "paint": {
+        "fill-color": "#F6EFEF"
+      },
+      "source": "un-l",
+      "source-layer": "landcover",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "landuse"
+        ],
+        [
+          "pier"
+        ],
+        false,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ]
+      ],
+      "id": "pg-land-trans-area",
+      "maxzoom": 17,
+      "paint": {
+        "fill-color": "#E9DCE7"
+      },
+      "source": "osm-l",
+      "source-layer": "trans_area",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "z_order"
+        ],
+        [
+          2,
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-land-urban",
+      "maxzoom": 17,
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "z_order"
+          ],
+          2,
+          "#BDDFC9",
+          [
+            3,
+            9
+          ],
+          "#ECE0CF",
+          4,
+          "#E1DEEC",
+          8,
+          "#EDE6E6",
+          [
+            "rgb",
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "lu_urban",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "z_order"
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-land-nature-m",
+      "maxzoom": 17,
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "z_order"
+          ],
+          [
+            4,
+            7
+          ],
+          "#CFE6C3",
+          5,
+          "#E2EBCF",
+          [
+            1,
+            2
+          ],
+          "#F2F2DC",
+          6,
+          "#F2F2E3",
+          [
+            "rgb",
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "nature-m",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "z_order"
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-land-nature-l",
+      "maxzoom": 17,
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "z_order"
+          ],
+          2,
+          "#E5DFD1",
+          9,
+          "#ECE7DE",
+          [
+            4,
+            16
+          ],
+          "#F2F2E3",
+          [
+            13,
+            14
+          ],
+          "#F2F2DC",
+          [
+            5,
+            6,
+            15
+          ],
+          "#E2EBCF",
+          [
+            7,
+            12
+          ],
+          "#E1EDC9",
+          [
+            1,
+            3,
+            8,
+            10,
+            11
+          ],
+          "#BAE3BA",
+          [
+            "rgb",
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "source": "osm-l",
+      "source-layer": "nature-l",
+      "type": "fill"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test2",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "version": 8,
+  "zoom": 4
+}
