@@ -3,7 +3,7 @@
     0,
     0
   ],
-  "glyphs": "https://ubukawa.github.io/style_test2/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://ubukawa.github.io/style_test3/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -478,7 +478,18 @@
       "id": "pt-place-capital-m",
       "layout": {
         "icon-allow-overlap": true,
-        "icon-image": "national_capital",
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "poptyp"
+          ],
+          "National Capital",
+          "PPL_National",
+          "Alternative capital",
+          "PPL_Alternative",
+          "PPL_Territorial"
+        ],
         "text-allow-overlap": true,
         "text-field": "{cartolb}",
         "text-font": [
@@ -565,7 +576,18 @@
       "id": "pt-place-capital-s",
       "layout": {
         "icon-allow-overlap": true,
-        "icon-image": "national_capital",
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "poptyp"
+          ],
+          "National Capital",
+          "PPL_National",
+          "Alternative capital",
+          "PPL_Alternative",
+          "PPL_Territorial"
+        ],
         "text-allow-overlap": true,
         "text-field": "{cartolb}",
         "text-font": [
@@ -605,7 +627,7 @@
       "type": "symbol"
     }
   ],
-  "site_root": "https://ubukawa.github.io/style_test2",
+  "site_root": "https://ubukawa.github.io/style_test3",
   "sources": {
     "osm-l": {
       "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
@@ -644,7 +666,7 @@
       "type": "vector"
     }
   },
-  "sprite": "https://ubukawa.github.io/style_test2/sprite/sprite",
+  "sprite": "https://www.unvt-test.com:3000/sprite-un/sprite_S",
   "version": 8,
   "zoom": 4
 }
