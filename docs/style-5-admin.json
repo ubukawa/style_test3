@@ -967,7 +967,207 @@
       "source-layer": "hq_bnd",
       "type": "line"
     },
-     {
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "International boundary",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-admin-m-halo-international",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          220,
+          0.65
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2.67
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Armistice or International administrative line",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-admin-m-halo-armistice",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          220,
+          0.65
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2.67
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Special boundary line",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-admin-m-halo-special",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          220,
+          0.65
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2.67
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "bdytyp"
+        ],
+        "Other line of separation",
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-admin-m-halo-other",
+      "maxzoom": 6,
+      "minzoom": 3,
+      "paint": {
+        "line-color": [
+          "rgba",
+          230,
+          227,
+          220,
+          0.65
+        ],
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2.67
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      "source": "un-s",
+      "source-layer": "hq_bnd",
+      "type": "line"
+    },
+    {
       "filter": [
         "match",
         [
