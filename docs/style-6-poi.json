@@ -1,0 +1,1110 @@
+{
+  "center": [
+    0,
+    0
+  ],
+  "glyphs": "https://ubukawa.github.io/style_test3/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-s",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-s",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "geometry-type"
+        ],
+        [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        true,
+        false
+      ],
+      "id": "pg-landmass-l",
+      "maxzoom": 18,
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "#FAF9F6"
+      },
+      "source": "un-l",
+      "source-layer": "landmass",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "_source"
+        ],
+        [
+          "osm_planet_places"
+        ],
+        false,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Point",
+            "MultiPoint"
+          ],
+          true,
+          false
+        ]
+      ],
+      "id": "pt-poi-osm",
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "capital"
+          ],
+          "yes",
+          "PPL_National",
+          [
+            "match",
+            [
+              "coalesce",
+              [
+                "get",
+                "leasure"
+              ],
+              [
+                "get",
+                "sport"
+              ],
+              [
+                "get",
+                "amenity"
+              ],
+              [
+                "get",
+                "historic"
+              ],
+              [
+                "get",
+                "office"
+              ],
+              [
+                "get",
+                "tourism"
+              ],
+              [
+                "get",
+                "shop"
+              ],
+              [
+                "get",
+                "man_made"
+              ],
+              [
+                "get",
+                "landuse"
+              ],
+              [
+                "get",
+                "power"
+              ],
+              [
+                "get",
+                "aeroway"
+              ],
+              [
+                "get",
+                "railway"
+              ],
+              [
+                "get",
+                "public_transport"
+              ],
+              [
+                "get",
+                "highway"
+              ],
+              [
+                "get",
+                "religion"
+              ]
+            ],
+            [
+              "aerodrome",
+              "aeroway",
+              "airfield"
+            ],
+            "POI_Airfield",
+            "airport",
+            "POI_Airport_S",
+            "theme_park",
+            "POI_Amusement",
+            "archaeological_site",
+            "POI_Archeological",
+            [
+              "atm",
+              "bank",
+              "bureau_de_change",
+              "money_transfer"
+            ],
+            "POI_Bank",
+            [
+              "bar",
+              "biergarten",
+              "nightclub",
+              "pub"
+            ],
+            "POI_Bar",
+            [
+              "bus_station",
+              "bus_stop"
+            ],
+            "POI_Bus",
+            [
+              "castle",
+              "fort"
+            ],
+            "POI_Castle",
+            "christian",
+            "POI_Church",
+            "cinema",
+            "POI_Cinema",
+            [
+              "college",
+              "university"
+            ],
+            "POI_College",
+            "communications_tower",
+            "POI_Communication",
+            "courthouse",
+            "POI_Court",
+            "embassy",
+            "POI_Embassy",
+            "ferry_terminal",
+            "POI_Ferry",
+            "fire_station",
+            "POI_Fire",
+            "fuel",
+            "POI_Fuel",
+            "helipad",
+            "POI_Helipad",
+            [
+              "clinic",
+              "dentist",
+              "doctor",
+              "doctors",
+              "hospital"
+            ],
+            "POI_Hospital",
+            [
+              "bed_and_breakfast",
+              "chalet",
+              "guest_house",
+              "hostel",
+              "hotel",
+              "motel"
+            ],
+            "POI_Hotel",
+            "lighthouse",
+            "POI_Lighthouse",
+            [
+              "cemetery",
+              "grave_yard",
+              "memorial"
+            ],
+            "POI_Memorial",
+            "monument",
+            "POI_Monument",
+            "muslim",
+            "POI_Mosque",
+            "ngo",
+            "POI_NGO",
+            [
+              "park",
+              "water_park"
+            ],
+            "POI_Park",
+            "pharmacy",
+            "POI_Pharmacy",
+            "police",
+            "POI_Police",
+            "post_office",
+            "POI_Post",
+            "prison",
+            "POI_Prison",
+            [
+              "arts_centre",
+              "community_centre",
+              "customs",
+              "government",
+              "library",
+              "museum",
+              "public_building",
+              "ruins"
+            ],
+            "POI_Public",
+            [
+              "halt",
+              "station",
+              "tram_stop"
+            ],
+            "POI_Rail",
+            [
+              "cafe",
+              "fast_food",
+              "food_court",
+              "restaurant"
+            ],
+            "POI_Restaurant",
+            [
+              "kindergarten",
+              "school"
+            ],
+            "POI_School",
+            [
+              "alcohol",
+              "bakery",
+              "beverages",
+              "books",
+              "butcher",
+              "car",
+              "car_rental",
+              "car_repair",
+              "clothes",
+              "computer",
+              "department_store",
+              "furniture",
+              "greengrocer",
+              "hairdresser",
+              "kiosk",
+              "marketplace",
+              "mobile_phone",
+              "optician",
+              "stationery",
+              "supermarket",
+              "travel_agency"
+            ],
+            "POI_Shop",
+            [
+              "golf_course",
+              "sports_centre",
+              "stadium",
+              "swimming",
+              "swimming_pool",
+              "tennis"
+            ],
+            "POI_Sport",
+            "storage_tank",
+            "POI_Storage",
+            "drinking_water",
+            "POI_Supply",
+            "jewish",
+            "POI_Synagogue",
+            "theatre",
+            "POI_Theatre",
+            "tower",
+            "POI_Tower",
+            "townhall",
+            "POI_Townhall",
+            "windmill",
+            "POI_Windmill",
+            [
+              "buddhist",
+              "hindu",
+              "taoist"
+            ],
+            "POI_Worship",
+            "zoo",
+            "POI_Zoo",
+            [
+              "harbour",
+              "landfill",
+              "parking",
+              "pitch",
+              "place_of_worship",
+              "playground",
+              "shelter",
+              "shintoist",
+              "sikh",
+              "social_facility",
+              "veterinary",
+              "waste_disposal",
+              "wastewater_plant",
+              "water_tower",
+              "water_well",
+              "water_works",
+              "watermill"
+            ],
+            "PPL_Town",
+            "PPL_Town"
+          ]
+        ],
+        "icon-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            1,
+            [
+              "case",
+              [
+                "has",
+                "place"
+              ],
+              0,
+              [
+                "any",
+                [
+                  "has",
+                  "shop"
+                ],
+                [
+                  "has",
+                  "tourism"
+                ],
+                [
+                  "has",
+                  "craft"
+                ],
+                [
+                  "has",
+                  "amenity"
+                ],
+                [
+                  "has",
+                  "sports"
+                ]
+              ],
+              0,
+              1
+            ]
+          ],
+          17,
+          1
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            "bottom-left",
+            "center"
+          ],
+          17,
+          "top"
+        ],
+        "text-field": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "place"
+            ],
+            [
+              "get",
+              "name"
+            ],
+            ""
+          ],
+          17,
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "sans"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            [
+              "literal",
+              [
+                0.4,
+                0
+              ]
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          17,
+          [
+            "literal",
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "capital"
+            ],
+            "yes",
+            20,
+            [
+              "match",
+              [
+                "get",
+                "place"
+              ],
+              "city",
+              18,
+              "town",
+              16,
+              [
+                "village",
+                "hamlet",
+                "isolated_dwelling",
+                "locality"
+              ],
+              12,
+              10
+            ]
+          ],
+          18,
+          10
+        ]
+      },
+      "paint": {
+        "text-color": [
+          "rgb",
+          0,
+          0,
+          0
+        ],
+        "text-halo-color": [
+          "rgb",
+          238,
+          238,
+          238
+        ],
+        "text-halo-width": 1
+      },
+      "source": "osm-l",
+      "source-layer": "poi",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "countrycode"
+        ],
+        [
+          "LIB",
+          "CAF"
+        ],
+        false,
+        true
+      ],
+      "id": "pt-poi-un",
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "coalesce",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "get",
+              "feat_class"
+            ]
+          ],
+          "Airfield",
+          "POI_Airfield",
+          "Airport",
+          "POI_Airport_S",
+          [
+            "Archeological",
+            "Ruins"
+          ],
+          "POI_Archeological",
+          "Bank",
+          "POI_Bank",
+          [
+            "Bar",
+            "Nightclub",
+            "Club"
+          ],
+          "POI_Bar",
+          "Bus Station",
+          "POI_Bus",
+          "Military Camp",
+          "POI_Camp",
+          [
+            "Castle",
+            "Fort"
+          ],
+          "POI_Castle",
+          [
+            "Christian",
+            "Church"
+          ],
+          "POI_Church",
+          [
+            "College",
+            "University"
+          ],
+          "POI_College",
+          [
+            "Communication",
+            "Communication Tower",
+            "RadioTower",
+            "Telecommunication"
+          ],
+          "POI_Communication",
+          "Courthouse",
+          "POI_Court",
+          "Cultural",
+          "POI_Cultural",
+          [
+            "Consulate",
+            "Embassy"
+          ],
+          "POI_Embassy",
+          [
+            "Boat Ramp",
+            "Ferry Terminal",
+            "Port"
+          ],
+          "POI_Ferry",
+          "Fire Station",
+          "POI_Fire",
+          [
+            "Fuel",
+            "Fuel Station"
+          ],
+          "POI_Fuel",
+          "Helipad",
+          "POI_Helipad",
+          "Hospital",
+          "POI_Hospital",
+          "Hotel",
+          "POI_Hotel",
+          "IDP / Refugee",
+          "POI_IDP",
+          "Industrial",
+          "POI_Industrial",
+          [
+            "Cemetery",
+            "Memorial"
+          ],
+          "POI_Memorial",
+          "Military",
+          "POI_Military",
+          "Monument",
+          "POI_Monument",
+          [
+            "Mosque",
+            "Muslim"
+          ],
+          "POI_Mosque",
+          "Museum",
+          "POI_Museum",
+          "NGO",
+          "POI_NGO",
+          "Park",
+          "POI_Park",
+          "Pharmacy",
+          "POI_Pharmacy",
+          [
+            "Police",
+            "Police Station"
+          ],
+          "POI_Police",
+          "Post Office",
+          "POI_Post",
+          "Prison",
+          "POI_Prison",
+          [
+            "International Organisation",
+            "Library",
+            "Local Authority",
+            "National Institution",
+            "Other Public Building",
+            "Public Place",
+            "Regional Organisation",
+            "Social Centre",
+            "Town Hall",
+            "Youth Centre"
+          ],
+          "POI_Public",
+          "Railway Station",
+          "POI_Rail",
+          "Restaurant",
+          "POI_Restaurant",
+          [
+            "Kindergarten",
+            "Primary School",
+            "School",
+            "Secondary School"
+          ],
+          "POI_School",
+          [
+            "Commercial",
+            "Market",
+            "Media",
+            "Super Market"
+          ],
+          "POI_Shop",
+          "Sport",
+          "POI_Sport",
+          "Stadium",
+          "POI_Stadium",
+          "Water Storage",
+          "POI_Storage",
+          "Water Supply",
+          "POI_Supply",
+          "Taxi Station",
+          "POI_Taxi",
+          "UN",
+          "POI_UN",
+          "Zoo",
+          "POI_Zoo",
+          [
+            "Health Centre",
+            "Information Centre",
+            "Landmark",
+            "Other",
+            "Residence"
+          ],
+          "PPL_Town",
+          "PPL_Town"
+        ],
+        "icon-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          15,
+          1
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          "center",
+          17,
+          "top"
+        ],
+        "text-field": "{poiname}",
+        "text-font": [
+          "sans"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          17,
+          [
+            "literal",
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          10,
+          15,
+          12
+        ]
+      },
+      "paint": {
+        "text-color": [
+          "rgb",
+          0,
+          0,
+          0
+        ],
+        "text-halo-color": [
+          "rgb",
+          238,
+          238,
+          238
+        ],
+        "text-halo-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "poi",
+      "type": "symbol"
+    },
+    {
+      "id": "pt-poi-unminusca",
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "coalesce",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "get",
+              "feat_class"
+            ]
+          ],
+          "Airfield",
+          "POI_Airfield",
+          "Airport",
+          "POI_Airport_S",
+          [
+            "Archeological",
+            "Ruins"
+          ],
+          "POI_Archeological",
+          "Bank",
+          "POI_Bank",
+          [
+            "Bar",
+            "Nightclub",
+            "Club"
+          ],
+          "POI_Bar",
+          "Bus Station",
+          "POI_Bus",
+          "Military Camp",
+          "POI_Camp",
+          [
+            "Castle",
+            "Fort"
+          ],
+          "POI_Castle",
+          [
+            "Christian",
+            "Church"
+          ],
+          "POI_Church",
+          [
+            "College",
+            "University"
+          ],
+          "POI_College",
+          [
+            "Communication",
+            "Communication Tower",
+            "RadioTower",
+            "Telecommunication"
+          ],
+          "POI_Communication",
+          "Courthouse",
+          "POI_Court",
+          "Cultural",
+          "POI_Cultural",
+          [
+            "Consulate",
+            "Embassy"
+          ],
+          "POI_Embassy",
+          [
+            "Boat Ramp",
+            "Ferry Terminal",
+            "Port"
+          ],
+          "POI_Ferry",
+          "Fire Station",
+          "POI_Fire",
+          [
+            "Fuel",
+            "Fuel Station"
+          ],
+          "POI_Fuel",
+          "Helipad",
+          "POI_Helipad",
+          "Hospital",
+          "POI_Hospital",
+          "Hotel",
+          "POI_Hotel",
+          "IDP / Refugee",
+          "POI_IDP",
+          "Industrial",
+          "POI_Industrial",
+          [
+            "Cemetery",
+            "Memorial"
+          ],
+          "POI_Memorial",
+          "Military",
+          "POI_Military",
+          "Monument",
+          "POI_Monument",
+          [
+            "Mosque",
+            "Muslim"
+          ],
+          "POI_Mosque",
+          "Museum",
+          "POI_Museum",
+          "NGO",
+          "POI_NGO",
+          "Park",
+          "POI_Park",
+          "Pharmacy",
+          "POI_Pharmacy",
+          [
+            "Police",
+            "Police Station"
+          ],
+          "POI_Police",
+          "Post Office",
+          "POI_Post",
+          "Prison",
+          "POI_Prison",
+          [
+            "International Organisation",
+            "Library",
+            "Local Authority",
+            "National Institution",
+            "Other Public Building",
+            "Public Place",
+            "Regional Organisation",
+            "Social Centre",
+            "Town Hall",
+            "Youth Centre"
+          ],
+          "POI_Public",
+          "Railway Station",
+          "POI_Rail",
+          "Restaurant",
+          "POI_Restaurant",
+          [
+            "Kindergarten",
+            "Primary School",
+            "School",
+            "Secondary School"
+          ],
+          "POI_School",
+          [
+            "Commercial",
+            "Market",
+            "Media",
+            "Super Market"
+          ],
+          "POI_Shop",
+          "Sport",
+          "POI_Sport",
+          "Stadium",
+          "POI_Stadium",
+          "Water Storage",
+          "POI_Storage",
+          "Water Supply",
+          "POI_Supply",
+          "Taxi Station",
+          "POI_Taxi",
+          "UN",
+          "POI_UN",
+          "Zoo",
+          "POI_Zoo",
+          [
+            "Health Centre",
+            "Information Centre",
+            "Landmark",
+            "Other",
+            "Residence"
+          ],
+          "PPL_Town",
+          "PPL_Town"
+        ],
+        "icon-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          15,
+          1
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          "center",
+          17,
+          "top"
+        ],
+        "text-field": "{poiname}",
+        "text-font": [
+          "sans"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          17,
+          [
+            "literal",
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          10,
+          15,
+          12
+        ]
+      },
+      "paint": {
+        "text-color": [
+          "rgb",
+          0,
+          0,
+          0
+        ],
+        "text-halo-color": [
+          "rgb",
+          238,
+          238,
+          238
+        ],
+        "text-halo-width": 1
+      },
+      "source": "un-l",
+      "source-layer": "poi_minusca",
+      "type": "symbol"
+    }
+  ],
+  "site_root": "https://ubukawa.github.io/style_test3",
+  "sources": {
+    "osm-l": {
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
+      "maxzoom": 15,
+      "minzoom": 6,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/osm-z6/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "osm-s": {
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 5,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-osm/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-l": {
+      "attribution": "UN_base",
+      "maxzoom": 15,
+      "minzoom": 5,
+      "tiles": [
+        "https://www.unvt-test.com:3000/zxy/un-z5/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
+    "un-s": {
+      "attribution": "UN small test",
+      "maxzoom": 4,
+      "minzoom": 0,
+      "tiles": [
+        "https://ubukawa.github.io/testDB/zxy-un/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://www.unvt-test.com:3000/sprite-un/sprite_S",
+  "version": 8,
+  "zoom": 4
+}
