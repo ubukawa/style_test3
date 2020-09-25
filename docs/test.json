@@ -1,0 +1,59 @@
+{
+  "version": 8,
+  "name": "Empty Style",
+  "metadata": {"maputnik:renderer": "mbgljs"},
+  "sources": {
+    "cartotile": {
+      "type": "vector",
+      "tiles": [
+        "https://cartotiles.github.io/experimental-cartotile/testdata/cartotile_v01/{z}/{x}/{y}.pbf"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14,
+      "maxzoom": 2
+    }
+  },
+  "sprite": "https://ubukawa.github.io/style_test3/sprite_test/sprite_S",
+  "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "maxzoom": 3,
+      "paint": {"background-color": "rgba(215, 252, 255, 1)"}
+    },
+    {
+      "id": "bnda",
+      "type": "fill",
+      "source": "cartotile",
+      "source-layer": "bnda",
+      "maxzoom": 3,
+      "paint": {"fill-color": "rgba(175, 175, 175, 1)"}
+    },
+    {
+      "id": "bndl",
+      "type": "line",
+      "source": "cartotile",
+      "source-layer": "bndl",
+      "maxzoom": 3,
+      "filter": ["all", ["==", "BDYTYP", 0]]
+    },
+    {
+      "id": "bndp",
+      "type": "circle",
+      "source": "cartotile",
+      "source-layer": "bndp",
+      "maxzoom": 3,
+      "layout": {"visibility": "none"}
+    },
+    {
+      "id": "test",
+      "type": "symbol",
+      "source": "cartotile",
+      "source-layer": "bndp",
+      "maxzoom": 6,
+      "layout": {"icon-image": "PPL_National"}
+    }
+  ],
+  "id": "wsr2zdbsw"
+}
