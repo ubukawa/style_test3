@@ -81,13 +81,9 @@
         false
       ],
       "id": "pg-hydro-water-wetland",
+      "maxzoom": 18,
       "paint": {
-        "fill-color": [
-          "rgb",
-          227,
-          242,
-          253
-        ]
+        "fill-pattern": "HYD_Wetland"
       },
       "source": "osm-l",
       "source-layer": "water",
@@ -116,6 +112,7 @@
         false
       ],
       "id": "pg-hydro-water-glacier",
+      "maxzoom": 18,
       "paint": {
         "fill-color": "#FBFCFB"
       },
@@ -149,7 +146,7 @@
         ]
       ],
       "id": "pg-hydro-water-l",
-      "maxzoom": 15,
+      "maxzoom": 18,
       "minzoom": 6,
       "paint": {
         "fill-color": [
@@ -164,31 +161,204 @@
       "type": "fill"
     },
     {
-      "id": "ls-hydro-water-l",
-      "maxzoom": 15,
-      "minzoom": 7,
-      "paint": {
-        "line-color": [
+      "filter": [
+        "match",
+        [
+          "get",
+          "waterway"
+        ],
+        [
+          "drain"
+        ],
+        [
           "match",
           [
-            "get",
-            "waterway"
+            "geometry-type"
           ],
-          "river",
-          "#D8ECF6",
-          "stream",
-          "#C7E4F2",
-          "canal",
-          "#C7E4F2",
-          "drain",
-          "#C7E4F2",
           [
-            "rgb",
-            33,
-            150,
-            243
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-l-drain",
+      "layout": {
+        "icon-allow-overlap": true,
+        "icon-image": "HYD_Drain",
+        "icon-rotation-alignment": "map",
+        "icon-size": {
+          "stops": [
+            [
+              11.53,
+              1
+            ],
+            [
+              18.17,
+              3
+            ]
           ]
-        ]
+        },
+        "symbol-placement": "line",
+        "symbol-spacing": 4
+      },
+      "maxzoom": 18,
+      "minzoom": 7,
+      "paint": {
+        "icon-color": "#C7E4F2"
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "waterway"
+        ],
+        [
+          "canal"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-l-canal",
+      "maxzoom": 18,
+      "minzoom": 7,
+      "paint": {
+        "line-color": "#C7E4F2",
+        "line-dasharray": [
+          2,
+          6667,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              7.21,
+              0.4
+            ],
+            [
+              11.53,
+              0.6667
+            ],
+            [
+              18.17,
+              2.6667
+            ]
+          ]
+        }
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "waterway"
+        ],
+        [
+          "stream"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-l-stream",
+      "maxzoom": 18,
+      "minzoom": 7,
+      "paint": {
+        "line-color": "#C7E4F2",
+        "line-width": {
+          "stops": [
+            [
+              11.53,
+              0.88
+            ],
+            [
+              18.17,
+              3.52
+            ]
+          ]
+        }
+      },
+      "source": "osm-l",
+      "source-layer": "water",
+      "type": "line"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "waterway"
+        ],
+        [
+          "river"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "LineString",
+            "MultiLineString"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "ls-hydro-water-l-river",
+      "maxzoom": 18,
+      "minzoom": 7,
+      "paint": {
+        "line-color": "#D8ECF6",
+        "line-width": {
+          "stops": [
+            [
+              7.21,
+              1
+            ],
+            [
+              11.53,
+              1.333
+            ],
+            [
+              18.17,
+              4.444
+            ]
+          ]
+        }
       },
       "source": "osm-l",
       "source-layer": "water",
