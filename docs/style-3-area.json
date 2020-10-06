@@ -63,6 +63,82 @@
         "match",
         [
           "get",
+          "landuse"
+        ],
+        [
+          "pier"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-area-pier",
+      "maxzoom": 18,
+      "paint": {
+        "fill-color": "#E9DCE7"
+      },
+      "source": "osm-l",
+      "source-layer": "trans_area",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "z_order"
+        ],
+        6,
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-area-military",
+      "maxzoom": 18,
+      "paint": {
+        "fill-opacity": {
+          "stops": [
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              1
+            ]
+          ]
+        },
+        "fill-pattern": "ARE_Military"
+      },
+      "source": "osm-l",
+      "source-layer": "lu_urban",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
           "building"
         ],
         [
@@ -84,7 +160,7 @@
         ]
       ],
       "id": "pg-area-building",
-      "maxzoom": 17,
+      "maxzoom": 18,
       "paint": {
         "fill-extrusion-color": "#CBC5C5",
         "fill-extrusion-height": 10
@@ -119,7 +195,7 @@
         ]
       ],
       "id": "pg-area-building-other",
-      "maxzoom": 17,
+      "maxzoom": 18,
       "paint": {
         "fill-extrusion-color": "#C3BDBD",
         "fill-extrusion-height": 10
@@ -152,28 +228,60 @@
           false
         ]
       ],
-      "id": "pg-area-park",
-      "maxzoom": 17,
+      "id": "ls-area-park-halo",
+      "layout": {
+        "line-join": "round"
+      },
+      "maxzoom": 18,
       "paint": {
-        "fill-color": [
-          "rgb",
-          187,
-          235,
-          203
+        "line-color": [
+          "match",
+          [
+            "get",
+            "z_order"
+          ],
+          1,
+          [
+            "rgba",
+            186,
+            234,
+            218,
+            0.3
+          ],
+          [
+            "rgba",
+            187,
+            235,
+            203,
+            0.3
+          ]
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "z_order"
+          ],
+          1,
+          5.333,
+          4
         ]
       },
       "source": "osm-l",
       "source-layer": "area_park",
-      "type": "fill"
+      "type": "line"
     },
     {
       "filter": [
         "match",
         [
           "get",
-          "z_order"
+          "fclass"
         ],
-        6,
+        [
+          "maritime"
+        ],
+        false,
         [
           "match",
           [
@@ -185,50 +293,30 @@
           ],
           true,
           false
-        ],
-        false
+        ]
       ],
-      "id": "pg-area-military",
-      "maxzoom": 17,
-      "paint": {
-        "fill-color": "#D2ACAD"
+      "id": "ls-area-park-line",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
       },
-      "source": "osm-l",
-      "source-layer": "trans_area",
-      "type": "fill"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
-          "landuse"
-        ],
-        [
-          "pier"
-        ],
-        [
+      "maxzoom": 18,
+      "paint": {
+        "line-color": [
           "match",
           [
-            "geometry-type"
+            "get",
+            "z_order"
           ],
-          [
-            "Polygon",
-            "MultiPolygon"
-          ],
-          true,
-          false
+          1,
+          "#8AB0A4",
+          "#8CB198"
         ],
-        false
-      ],
-      "id": "pg-area-pier",
-      "maxzoom": 17,
-      "paint": {
-        "fill-color": "#E9DCE7"
+        "line-width": 0.5
       },
       "source": "osm-l",
-      "source-layer": "trans_area",
-      "type": "fill"
+      "source-layer": "area_park",
+      "type": "line"
     }
   ],
   "site_root": "https://ubukawa.github.io/style_test3",
