@@ -449,82 +449,6 @@
         "match",
         [
           "get",
-          "landuse"
-        ],
-        [
-          "pier"
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "Polygon",
-            "MultiPolygon"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "pg-area-pier",
-      "maxzoom": 18,
-      "paint": {
-        "fill-color": "#E9DCE7"
-      },
-      "source": "osm-l",
-      "source-layer": "trans_area",
-      "type": "fill"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
-          "z_order"
-        ],
-        6,
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "Polygon",
-            "MultiPolygon"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "pg-area-military",
-      "maxzoom": 18,
-      "paint": {
-        "fill-opacity": {
-          "stops": [
-            [
-              10,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        },
-        "fill-pattern": "ARE_Military"
-      },
-      "source": "osm-l",
-      "source-layer": "lu_urban",
-      "type": "fill"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
           "building"
         ],
         [
@@ -614,60 +538,28 @@
           false
         ]
       ],
-      "id": "ls-area-park-halo",
-      "layout": {
-        "line-join": "round"
-      },
+      "id": "pg-area-park",
       "maxzoom": 18,
       "paint": {
-        "line-color": [
-          "match",
-          [
-            "get",
-            "z_order"
-          ],
-          1,
-          [
-            "rgba",
-            186,
-            234,
-            218,
-            0.3
-          ],
-          [
-            "rgba",
-            187,
-            235,
-            203,
-            0.3
-          ]
-        ],
-        "line-width": [
-          "match",
-          [
-            "get",
-            "z_order"
-          ],
-          1,
-          5.333,
-          4
+        "fill-color": [
+          "rgb",
+          187,
+          235,
+          203
         ]
       },
       "source": "osm-l",
       "source-layer": "area_park",
-      "type": "line"
+      "type": "fill"
     },
     {
       "filter": [
         "match",
         [
           "get",
-          "fclass"
+          "z_order"
         ],
-        [
-          "maritime"
-        ],
-        false,
+        6,
         [
           "match",
           [
@@ -679,30 +571,50 @@
           ],
           true,
           false
-        ]
+        ],
+        false
       ],
-      "id": "ls-area-park-line",
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
+      "id": "pg-area-military",
       "maxzoom": 18,
       "paint": {
-        "line-color": [
-          "match",
-          [
-            "get",
-            "z_order"
-          ],
-          1,
-          "#8AB0A4",
-          "#8CB198"
-        ],
-        "line-width": 0.5
+        "fill-color": "#D2ACAD"
       },
       "source": "osm-l",
-      "source-layer": "area_park",
-      "type": "line"
+      "source-layer": "trans_area",
+      "type": "fill"
+    },
+    {
+      "filter": [
+        "match",
+        [
+          "get",
+          "landuse"
+        ],
+        [
+          "pier"
+        ],
+        [
+          "match",
+          [
+            "geometry-type"
+          ],
+          [
+            "Polygon",
+            "MultiPolygon"
+          ],
+          true,
+          false
+        ],
+        false
+      ],
+      "id": "pg-area-pier",
+      "maxzoom": 18,
+      "paint": {
+        "fill-color": "#E9DCE7"
+      },
+      "source": "osm-l",
+      "source-layer": "trans_area",
+      "type": "fill"
     },
     {
       "filter": [
@@ -729,7 +641,12 @@
       "id": "pg-hydro-water-wetland",
       "maxzoom": 18,
       "paint": {
-        "fill-pattern": "HYD_Wetland"
+        "fill-color": [
+          "rgb",
+          227,
+          242,
+          253
+        ]
       },
       "source": "osm-l",
       "source-layer": "water",
@@ -807,204 +724,31 @@
       "type": "fill"
     },
     {
-      "filter": [
-        "match",
-        [
-          "get",
-          "waterway"
-        ],
-        [
-          "drain"
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "ls-hydro-water-l-drain",
-      "layout": {
-        "icon-allow-overlap": true,
-        "icon-image": "HYD_Drain",
-        "icon-rotation-alignment": "map",
-        "icon-size": {
-          "stops": [
-            [
-              11.53,
-              1
-            ],
-            [
-              18.17,
-              3
-            ]
-          ]
-        },
-        "symbol-placement": "line",
-        "symbol-spacing": 4
-      },
-      "maxzoom": 18,
+      "id": "ls-hydro-water-l",
+      "maxzoom": 15,
       "minzoom": 7,
       "paint": {
-        "icon-color": "#C7E4F2"
-      },
-      "source": "osm-l",
-      "source-layer": "water",
-      "type": "symbol"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
-          "waterway"
-        ],
-        [
-          "canal"
-        ],
-        [
+        "line-color": [
           "match",
           [
-            "geometry-type"
+            "get",
+            "waterway"
           ],
+          "river",
+          "#D8ECF6",
+          "stream",
+          "#C7E4F2",
+          "canal",
+          "#C7E4F2",
+          "drain",
+          "#C7E4F2",
           [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "ls-hydro-water-l-canal",
-      "maxzoom": 18,
-      "minzoom": 7,
-      "paint": {
-        "line-color": "#C7E4F2",
-        "line-dasharray": [
-          2,
-          6667,
-          2
-        ],
-        "line-width": {
-          "stops": [
-            [
-              7.21,
-              0.4
-            ],
-            [
-              11.53,
-              0.6667
-            ],
-            [
-              18.17,
-              2.6667
-            ]
+            "rgb",
+            33,
+            150,
+            243
           ]
-        }
-      },
-      "source": "osm-l",
-      "source-layer": "water",
-      "type": "line"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
-          "waterway"
-        ],
-        [
-          "stream"
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "ls-hydro-water-l-stream",
-      "maxzoom": 18,
-      "minzoom": 7,
-      "paint": {
-        "line-color": "#C7E4F2",
-        "line-width": {
-          "stops": [
-            [
-              11.53,
-              0.88
-            ],
-            [
-              18.17,
-              3.52
-            ]
-          ]
-        }
-      },
-      "source": "osm-l",
-      "source-layer": "water",
-      "type": "line"
-    },
-    {
-      "filter": [
-        "match",
-        [
-          "get",
-          "waterway"
-        ],
-        [
-          "river"
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        false
-      ],
-      "id": "ls-hydro-water-l-river",
-      "maxzoom": 18,
-      "minzoom": 7,
-      "paint": {
-        "line-color": "#D8ECF6",
-        "line-width": {
-          "stops": [
-            [
-              7.21,
-              1
-            ],
-            [
-              11.53,
-              1.333
-            ],
-            [
-              18.17,
-              4.444
-            ]
-          ]
-        }
+        ]
       },
       "source": "osm-l",
       "source-layer": "water",
